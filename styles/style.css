@@ -23,9 +23,11 @@
 }
 
 .header {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 136px 0 15px 0;
   font-family: var(--font-family, "PressStart2P", fantasy);
   line-height: normal;
   text-transform: uppercase;
@@ -34,15 +36,24 @@
   background: var(--background-color, #000000);
   max-inline-size: 696px;
   min-height: 364px;
+  margin-bottom: 100px;
 }
 
 .h1 {
-  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-bottom: 20px;
 }
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 9px;
+  padding-inline-start: 20px;
 }
 
 .theme-menu__button {
@@ -81,4 +92,60 @@
   animation: arrow 0.5s ease-in-out infinite alternate;
   inset-inline-start: -20px;
   inset-block-start: 0px;
+}
+
+.card__header {
+  border-block-end: 2px solid var(--text-color, #000000);
+  padding: 4px 10px;
+  background: var(--background-color);
+  font-family: var(--secondary-font-family);
+  font-size: 18px;
+  line-height: normal;
+  font-variation-settings: "wght" var(--headings-font-weight, 785);
+}
+
+.card__title {
+  font-size: var(--font-size);
+  line-height: normal;
+  font-variation-settings: "wght" var(--headings-font-weight, 785);
+}
+
+.card {
+  margin-inline: auto;
+  border: 2px solid var(--text-color, #000000);
+  background: var(--page-background-color, #ffffff);
+  max-inline-size: 696px;
+}
+
+.card__img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.card__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__tag {
+  position: absolute;
+  z-index: 1;
+
+  opacity: 0.5;
+
+  color: var(--text-color, #000000);
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+
+  font-size: 14px;
+  line-height: normal;
+
+  text-transform: uppercase;
+  text-shadow: 0 0 1px var(--background-color, #ffffff);
+  inset-inline-end: 13px;
+  inset-block-start: 24px;
+
+  mix-blend-mode: hard-light;
 }
