@@ -19,8 +19,15 @@
   min-block-size: 100dvb;
   padding-top: 102px;
   color: var(--text-color);
-  background: var(--background-image);
+  background: var(--background-image, repeating-linear-gradient(
+    to left,
+    #000000 0 2px,
+    #00000000 2px 4px
+  ),
+  repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px),
+  linear-gradient(to bottom, #007f0c, #004306));
 }
+
 
 .header {
   display: flex;
