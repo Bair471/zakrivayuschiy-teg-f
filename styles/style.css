@@ -95,7 +95,7 @@
 }
 
 .card__header {
-  border-block-end: 2px solid var(--text-color, #000000);
+  border-bottom: 2px solid var(--text-color);
   padding: 4px 10px;
   background: var(--background-color);
   font-family: var(--secondary-font-family);
@@ -111,8 +111,8 @@
 }
 
 .card {
-  margin-inline: auto;
   border: 2px solid var(--text-color, #000000);
+  margin-inline: auto;
   background: var(--page-background-color, #ffffff);
   max-inline-size: 696px;
 }
@@ -148,4 +148,159 @@
   inset-block-start: 24px;
 
   mix-blend-mode: hard-light;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: end;
+  align-items: stretch;
+  gap: 5px;
+  padding: 25px 25px 23px 25px;
+}
+
+.card__icon-button {
+  display: grid;
+  border: 2px solid transparent;
+  padding: 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--text-color, #000000);
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  border: 2px solid var(--text-color, #000000);
+  padding: 10px 36px;
+  font-family: var(--font-family, "PressStart2P", fantasy);
+  font-size: 14px;
+  text-transform: inherit;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--text-color, #000000);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text,
+.button__icon {
+  mix-blend-mode: difference;
+}
+
+.button__icon {
+  block-size: 22px;
+  inline-size: 22px;
+}
+
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 8px;
+  padding-inline-start: 20px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: transparent;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+}
+
+.theme-menu__button:not(:disabled)::after {
+  content: "";
+  display: block;
+  background: currentColor;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 2px;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: arrow 0.5s ease-in-out infinite alternate;
+  inset-inline-start: -20px;
+  inset-block-start: 0px;
+}
+
+.card__content {
+  background: var(--background-color);
+  font-family: var(--secondary-font-family);
+  font-size: var(--font-size);
+  display: grid;
+  gap: 27px;
+  border-block-start: 2px solid var(--text-color, #000000);
+  padding: 25px 30px 0 25px;
+  line-height: calc(21 / 18);
+}
+
+.card__pic {
+  width: 100%;
+  display: block;
+}
+
+.card__footer {
+  background: var(--background-color);
 }
