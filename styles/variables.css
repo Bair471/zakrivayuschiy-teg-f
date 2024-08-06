@@ -6,6 +6,6 @@
   --text-color: #00cc14;
   --font-size: 18px;
   --like-sparks-color: #ff0000;
-  --contour-color: var(--text-color, #000000);
-  --button-text-color: var(--text-color, #000000);
+  --contour-color: #00cc14;
+  --button-text-color: #00cc14;
 }
