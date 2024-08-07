@@ -121,6 +121,7 @@
   margin-inline: auto;
   background: var(--page-background-color, #ffffff);
   max-inline-size: 696px;
+  margin: 0 auto 50px auto;
 }
 
 .card__img {
@@ -333,3 +334,16 @@
 .card__footer {
   background: var(--background-color);
 }
+
+.car2 {
+filter: saturate(30%);
+}
+
+.car3 {
+  filter: saturate(500%) contrast(100%) brightness(100%);
+}
+
+.car4 {
+  filter: saturate(200%) grayscale(50%) hue-rotate(25deg) sepia(30%) contrast(100%) brightness(100%);
+}
+
