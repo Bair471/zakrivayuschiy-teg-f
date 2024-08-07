@@ -243,13 +243,6 @@ dialog::backdrop {
   z-index: 10;
 }
 
-.modal-window__floppy_image {
-  stroke: var(--accent-color);
-  z-index: 10;
-  width: 90px;
-  height: 40px;
-}
-
 .modal-window {
   width: 357px;
   background-color: var(--background-color);
