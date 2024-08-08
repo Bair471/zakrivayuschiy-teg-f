@@ -172,11 +172,8 @@
 }
 
 .card__icon-button {
-  cursor: pointer;
   outline: none;
-  background-color: var(--background-color, #000000);
   height: 38px;
-  display: flex;
   border: 2px solid transparent;
   align-items: center;
   justify-content: center;
@@ -304,33 +301,6 @@ dialog::backdrop {
   transform-origin: left;
   inline-size: 100%;
   block-size: 2px;
-}
-
-.theme-menu__button:hover {
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus {
-  outline: none;
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
-}
-
-.theme-menu__button:disabled {
-  opacity: 0.6;
-  cursor: default;
-  pointer-events: none;
-}
-
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  animation: arrow 0.5s ease-in-out infinite alternate;
-  inset-inline-start: -20px;
-  inset-block-start: 0px;
 }
 
 .card__content {
