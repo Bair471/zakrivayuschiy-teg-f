@@ -23,7 +23,7 @@
 :root.theme-dark {
   
   --text-color: #00cc14;
-  --background-color: var(--color-black, #000000);
+  --background-color: #000000;
   --background-image: repeating-linear-gradient(
       to left,
       #000000 0 2px,
