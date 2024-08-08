@@ -19,8 +19,11 @@
   min-block-size: 100dvb;
   padding-top: 102px;
   color: var(--text-color);
+  font-variation-settings: "wght" var(--font-weight, 400);
   background-image: var(--background-image, none);
   background-color: var(--background-color, #000000);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -107,6 +110,7 @@
 .card__title {
   font-size: var(--font-size , 18px);
   line-height: normal;
+  font-variation-settings: "wght" var(--header-font-weight, 700);
 }
 
 .card {
@@ -218,6 +222,14 @@ dialog::backdrop {
   stroke: var(--contour-color);
   mix-blend-mode: difference;
   z-index: 10;
+}
+
+.modal-window__floppy_image {
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+  stroke: var(--contour-color);
+  mix-blend-mode: difference;
 }
 
 .modal-window {
@@ -392,12 +404,6 @@ dialog::backdrop {
   gap: 16px;
 }
 
-.modal__icon {
-  flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
-}
-
 .modal__button {
   inline-size: 100%;
   position: relative;
@@ -448,4 +454,31 @@ dialog::backdrop {
 
 .pic8 {
   filter: hue-rotate(210deg);
+}
+
+@media (width < 376px) {
+  .modal {
+    padding: 28px 34px 28px 40px;
+    max-inline-size: 340px;
+  }
+
+  .button--save {
+    flex-direction: column;
+  }
+
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--background-color, #ffffff)) or
+    (text-stroke: 1px var(--background-color, #ffffff))
+) {
+  .card__tag {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color, #ffffff);
+    text-stroke: 1px var(--background-color, #ffffff);
+  }
 }
