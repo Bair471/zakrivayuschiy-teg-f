@@ -507,33 +507,31 @@
             </footer>
         </li>
       </ul>
+      <button
+      type="button"
+      onclick="window.modal.showModal();"
+      aria-controls="modal"
+      class="button save-button"
+    >
+      <svg class="button__icon" viewBox="0 0 40 40">
+        <use href="svg/floppy.svg#floppy" />
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
     </main>
-    <footer>
-      <button 
-        onclick="window['dialog-id'].showModal();"
-        aria-controls="dialog-id"
-        class="save__button">
-        <svg class="floppy_image" viewBox="0 0 20 20">
+    <dialog class="modal" id="modal">
+      <div class="modal__content">
+        <svg class="modal__icon" viewBox="0 0 40 40">
           <use href="svg/floppy.svg#floppy" />
         </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
-    <dialog id="dialog-id" class="modal-window">
-      <div class="modal-window__inner">
-        <div class="wrapper">
-          <svg class="floppy_image" viewBox="0 0 20 20">
-            <use href="svg/floppy.svg#floppy" />
-          </svg>
-          <p class="modal-window__text">Вставьте дискету, чтобы продолжить</p>
-        </div>
-        <form method="dialog">
-          <button class="modal-window__button">
-            <span class="button__text">ОК</span>
-          </button>
-        </form>
+        <p>Вставьте дискету,чтобы продолжить</p>
       </div>
-    </dialog> 
+      <form method="dialog">
+        <button type="submit" class="button modal__button">
+          <span class="button__text">ок</span>
+        </button>
+      </form>
+    </dialog>
     <script src="./scripts/like.js"></script>
     <script src="./scripts/set-theme.js"></script>
   </body>
