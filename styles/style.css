@@ -219,17 +219,17 @@ dialog::backdrop {
   width: 21px;
   height: 21px;
   margin-right: 8px;
-  stroke: var(--contour-color);
+  stroke: var(--floppy-color);
   mix-blend-mode: difference;
   z-index: 10;
 }
 
-.modal-window__floppy_image {
-  width: 21px;
-  height: 21px;
-  margin-right: 8px;
-  stroke: var(--contour-color);
+.modal-floppy_image {
+  stroke: var(--floppy-color);
   mix-blend-mode: difference;
+  z-index: 10;
+  width: 90px;
+  height: 40px;
 }
 
 .modal-window {
@@ -437,7 +437,7 @@ dialog::backdrop {
 }
 
 .pic4 {
-  filter: contrast(50%) hue-rotate(35deg) saturate(130%);
+  filter: grayscale(100%) contrast(150%);
 } 
 
 .pic5 {
@@ -453,19 +453,28 @@ dialog::backdrop {
 }
 
 .pic8 {
-  filter: hue-rotate(210deg);
+  filter: hue-rotate(180deg) blur(1px);
 }
 
 @media (width < 376px) {
   .modal {
-    padding: 28px 34px 28px 40px;
-    max-inline-size: 340px;
+    width: 357px;
+    background-color: var(--background-color);
+    font-family: var(--font-family, "PressStart2P", fantasy);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 32px 31px 32px;
+    border: 2px solid var(--text-color);
   }
 
-  .button--save {
+  .save-button {
     flex-direction: column;
+    width: 306px;
+    height: 80px;
+    padding: 15px 0;
+    justify-content: space-between;
   }
-
+  
   .button__icon {
     block-size: 28px;
     inline-size: 28px;
