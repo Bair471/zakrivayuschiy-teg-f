@@ -19,11 +19,11 @@
   min-block-size: 100dvb;
   padding-top: 102px;
   color: var(--text-color);
-  font-variation-settings: "wght" var(--font-weight, 400);
   background-image: var(--background-image, none);
   background-color: var(--background-color, #000000);
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: "wght" var(--font-weight, 465);
 }
 
 .header {
@@ -31,7 +31,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 136px 0 15px 0;
+  padding: 134px 0 22px 0;
   font-family: var(--font-family, "PressStart2P", fantasy);
   line-height: normal;
   text-transform: uppercase;
@@ -39,18 +39,17 @@
   border: 2px solid var(--text-color, #000000);
   background: var(--background-color, #000000);
   max-inline-size: 696px;
-  min-height: 364px;
-  margin-bottom: 100px;
+  margin-bottom: 101px;
 }
 
-.h1 {
+.a {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-bottom: 20px;
 }
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  margin-bottom: 22px;
+  margin-bottom: 23px;
   text-transform: uppercase;
 }
 
@@ -61,6 +60,8 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -83,7 +84,7 @@
 
 .card__header {
   border-bottom: 2px solid var(--text-color, #00cc14);
-  padding: 4px 10px;
+  padding: 4px 8px;
   background: var(--background-color, #000000);
   font-family: var(--secondary-font-family, "Inter", sans-serif);
   font-size: 18px;
@@ -136,8 +137,7 @@
   display: flex;
   justify-content: end;
   align-items: stretch;
-  gap: 5px;
-  padding: 25px 25px 23px 25px;
+  padding: 25px 23px 26px 25px;
 }
 
 .card__icon-button:focus {
@@ -162,8 +162,8 @@
   border: 2px solid var(--contour-color, #00cc14);
   background-color: transparent;
   line-height: 90%;
-  transition: 0.5s;
   font-size: 14px;
+  transition: 0.3s ease;
 }
 
 .card__icon-button {
@@ -183,7 +183,7 @@
 
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .wrapper {
@@ -193,20 +193,20 @@ dialog::backdrop {
 }
 
 .floppy_image {
-  width: 21px;
+  width: 20px;
   height: 21px;
-  margin-right: 8px;
-  stroke: var(--floppy-color);
+  margin-right: 9px;
   mix-blend-mode: difference;
   z-index: 10;
+  color: var(--button-text-color, #00cc14);
 }
 
 .modal-floppy_image {
-  stroke: var(--floppy-color);
   mix-blend-mode: difference;
   z-index: 10;
   width: 90px;
   height: 40px;
+  color: var(--button-text-color, #00cc14);
 }
 
 .modal-window {
@@ -272,7 +272,7 @@ dialog::backdrop {
 
 .theme-menu__list {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   padding-inline-start: 20px;
 }
 
@@ -305,13 +305,14 @@ dialog::backdrop {
   display: grid;
   gap: 27px;
   border-block-start: 2px solid var(--text-color, #000000);
-  padding: 25px 30px 0 25px;
+  padding: 30px 30px 0 23px;
   line-height: calc(21 / 18);
 }
 
 .modal {
   border: 2px solid var(--text-color, #000000);
   padding: 25px 30px;
+  font-size: 14px;
   color: var(--text-color, #000000);
   font-family: var(--font-family, "PressStart2P", fantasy);
   line-height: 1.5;
@@ -326,7 +327,7 @@ dialog::backdrop {
   display: flex;
   margin: 0 auto 80px;
   width: 340px;
-  height: 55px;
+  height: 58px;
   align-items: center;
   justify-content: center;
   font-family: var(--font-family, fantasy);
@@ -341,11 +342,7 @@ dialog::backdrop {
   display: grid;
   grid-template-rows: repeat(2, min-content);
   gap: 30px;
-}
-
-.modal::backdrop {
-  opacity: 0.75;
-  background: var(--background-color, #000000);
+  overflow: hidden;
 }
 
 .modal__content {
@@ -367,6 +364,7 @@ dialog::backdrop {
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
+  width: 293px;
 }
 
 .card__pic {
@@ -374,56 +372,81 @@ dialog::backdrop {
   display: block;
 }
 
-.pic2 {
+.filter-saturate {
   filter: saturate(30%);
 }
 
-.pic3 {
+.filter-satur-contr {
   filter: saturate(500%) contrast(100%) brightness(100%);
 }
 
-.pic4 {
+.filter-grayscale {
   filter: grayscale(100%) contrast(150%);
 } 
 
-.pic5 {
+.filter-invert {
   filter: invert(100%);
 }
 
-.pic6 {
+.filter-sepia {
   filter: sepia(90%);
 }
 
-.pic7 {
+.filter-blur {
   filter: blur(10px);
 }
 
-.pic8 {
+.filter-hue-rotate {
   filter: hue-rotate(180deg) blur(1px);
 }
 
 @media (width < 376px) {
   .modal {
     width: 357px;
-    background-color: var(--background-color);
-    font-family: var(--font-family, "PressStart2P", fantasy);
-    text-transform: uppercase;
-    font-size: 14px;
     padding: 32px 31px 32px;
-    border: 2px solid var(--text-color);
   }
 
   .save-button {
     flex-direction: column;
     width: 306px;
-    height: 80px;
-    padding: 15px 0;
+    height: 83px;
+    padding: 14px 0;
     justify-content: space-between;
   }
   
   .button__icon {
     block-size: 28px;
     inline-size: 28px;
+  }
+  
+  .header__subtitle {
+    margin-bottom: 23px;
+  }
+
+  .h1 {
+    margin-bottom: 21px;
+  }
+
+  .header {
+    padding: 117px 0 22px 0;
+  }
+  
+  .card__header {
+    padding: 4px 10px;
+  }
+
+  .card__content {
+    padding: 27px 30px 3px 25px;
+  }
+
+  .card__footer {
+    padding: 21px 25px 25px 25px;
+  }
+
+  .floppy_image {
+    width: 28px;
+    height: 29px;
+    margin-right: 0px;
   }
 }
 
