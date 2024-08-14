@@ -39,7 +39,7 @@
     --font-weight: 465;
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) {
 :root {
     --floppy-color: #00cc14;
     --text-color: #00cc14;
@@ -58,7 +58,7 @@
   }
   }
   
-  @media (prefers-color-scheme: light){
+  @media (prefers-color-scheme: light) {
   :root {
     --floppy-color: #fff;
     --text-color: #000000;
