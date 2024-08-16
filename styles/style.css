@@ -272,17 +272,12 @@ dialog::backdrop {
   width: 100%;
 }
 
-.button__text,
-.button__icon {
+.button__text {
   color: var(--button-text-color, #00cc14);
   mix-blend-mode: difference;
   z-index: 1;
 }
 
-.button__icon {
-  block-size: 22px;
-  inline-size: 22px;
-}
 
 .like-icon {
   block-size: 36px;
@@ -401,11 +396,6 @@ dialog::backdrop {
     height: 83px;
     padding: 14px 0;
     justify-content: space-between;
-  }
-  
-  .button__icon {
-    block-size: 28px;
-    inline-size: 28px;
   }
   
   .header__subtitle {
