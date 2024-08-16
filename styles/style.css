@@ -188,7 +188,6 @@
   background-color: transparent;
   line-height: 90%;
   font-size: 14px;
-  transition: 0.3s ease;
 }
 
 .card__icon-button {
@@ -255,6 +254,7 @@ dialog::backdrop {
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--text-color, #00cc14);
+  transition: 0.5s ease-in-out;
 }
 
 .button::before {
