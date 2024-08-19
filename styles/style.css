@@ -174,22 +174,6 @@
   border-color: var(--text-color, #000000);
 }
 
-.card__like-button {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  width: 130px;
-  height: 38px;
-  padding: 9px 17px;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--font-family, "PressStart2P", fantasy);
-  border: 2px solid var(--contour-color, #00cc14);
-  background-color: transparent;
-  line-height: 90%;
-  font-size: 14px;
-}
-
 .card__icon-button {
   outline: none;
   height: 38px;
@@ -254,7 +238,7 @@ dialog::backdrop {
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--text-color, #00cc14);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease;
 }
 
 .button::before {
@@ -307,21 +291,43 @@ dialog::backdrop {
   max-inline-size: 357px;
 }
 
-.save-button {
+.button {
   cursor: pointer;
   position: relative;
+  font-family: var(--font-family, "PressStart2P", fantasy);
+  justify-content: center;
+  border: 2px solid var(--contour-color, #00cc14);
+  align-items: center;
   display: flex;
+  font-size: 14px;
+}
+
+.modal__button {
+  inline-size: 100%;
+  z-index: 1;
+  padding: 10px 36px;
+  text-transform: inherit;
+  background: var(--background-color, #000000);
+  transition: box-shadow 0.3s ease;
+  appearance: none;
+  width: 293px;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  padding: 9px 17px;
+  background-color: transparent;
+  line-height: 90%;
+}
+
+.save-button {
   margin: 0 auto 80px;
   width: 340px;
   height: 58px;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family, fantasy);
-  border: 2px solid var(--text-color);
-  font-size: 14px;
   line-height: 90%;
   background-color: var(--background-color);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease;
 }
 
 .modal[open] {
@@ -334,22 +340,6 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-.modal__button {
-  inline-size: 100%;
-  position: relative;
-  z-index: 1;
-  border: 2px solid var(--text-color, #000000);
-  padding: 10px 36px;
-  font-family: var(--font-family, "PressStart2P", fantasy);
-  font-size: 14px;
-  text-transform: inherit;
-  background: var(--background-color, #000000);
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  appearance: none;
-  width: 293px;
 }
 
 .card__pic {
